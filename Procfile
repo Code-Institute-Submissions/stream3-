@@ -1,1 +1,1 @@
-web: gunicorn stream3_project.wsgi:application
+web: gunicorn cpstop.wsgi:application
