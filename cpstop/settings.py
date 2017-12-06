@@ -26,7 +26,7 @@ SECRET_KEY = '4fpf=l&xvj9@rwdoc@5=f@xa=xwow2%6&!u*zn-m#5a&k-jmhj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", True)
 
-ALLOWED_HOSTS = ['stream3-project-peterkosinski.c9users.io']
+ALLOWED_HOSTS = ['compare-stop-d1.herokuapp.com']
 
 
 # Application definition

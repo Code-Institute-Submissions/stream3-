@@ -3,19 +3,24 @@
 <form action="{% url 'search' %}" method="get">
             <input type="text" name="q" autocomplete="on">
             <button type="submit">Search</button>
+            
         </form><br>
         
-        <input type="radio" onclick="filterSelection('all')" name="category" checked> Show all
+<input type="radio" onclick="filterSelection('all')" name="category" checked> Show all
 <input type="radio" onclick="filterSelection('Independent Driving Instructor')" name="category"> Independent Driving Instructor
 <input type="radio" onclick="filterSelection('Driving School')" name="category"> Driving School
 <input type="radio" onclick="filterSelection('Insurance Company')" name="category"> Insurance Company
 
 Sort Price
-
-<select>
+<select name='sortby'>
   <option value="-Lesson_Price_For_12">High to Low</option>
   <option value="Lesson_Price_For_12">Low to High</option>
 </select>
+
+<!--<select name='sortby'>-->
+<!--  <option value="-Lesson_Price_For_12">High to Low</option>-->
+<!--  <option value="Lesson_Price_For_12">Low to High</option>-->
+<!--</select>-->
 
 
 

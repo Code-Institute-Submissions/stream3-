@@ -9,10 +9,14 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # Create your views here.
 def all_schools(request):
-    schools = School.objects.all()
 
-    # sort = ****get value from dropdown****
-    # schools = School.objects.all().order_by(sort)
+    if request.GET and 'sortby' in request.GET:
+        sortby = request.GET.get('sortby')
+        schools = School.objects.all().order_by(sortby)
+    else:
+        schools = School.objects.all()
+
+
 
     page = request.GET.get('page', 1)
 
@@ -34,6 +38,11 @@ def view_school(request, slug):
     return render(request, "school.html",{"school": school, "related" : related}) 
     
 def do_search(request):
-    schools = School.objects.filter(Area__icontains=request.GET['q'])
+    if request.GET and 'sortby' in request.GET:
+        sortby = request.GET['sortby']
+        schools = School.objects.filter(Area__icontains=request.GET['q']).order_by(sortby)
+    else:
+        schools = School.objects.filter(Area__icontains=request.GET['q'])
+  
     return render(request, "schools.html", {"schools": schools})        
     
