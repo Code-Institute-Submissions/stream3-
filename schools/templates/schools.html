@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "basewithoutlogin.html" %}
 {% block content %}
 <form action="{% url 'search' %}" method="get">
             <input type="text" name="q" autocomplete="on">
@@ -10,10 +10,19 @@
 <input type="radio" onclick="filterSelection('Driving School')" name="category"> Driving School
 <input type="radio" onclick="filterSelection('Insurance Company')" name="category"> Insurance Company
 
-                
+Sort Price
+
+<select>
+  <option value="-Lesson_Price_For_12">High to Low</option>
+  <option value="Lesson_Price_For_12">Low to High</option>
+</select>
+
+
+
 
  {% for school in schools %}
- <a href='{% url 'view_school' school.slug %}'>
+ 
+ <a href='{% url 'view_school' school.slug %}' class ='table table-bordered' >
 
     <div class="filterDiv row {{ school.school_type }} ">
         <div class="col-xs-2">
@@ -44,7 +53,7 @@
         
         <div class="col-xs-2">
             <h4>12 Lessons From:</h4><br>
-            <h1>€{{ school.Lesson_Price_For_12 }}</h1>
+            <h1 class="price">€{{ school.Lesson_Price_For_12 }}</h1>
             
         </div>
         
@@ -55,11 +64,36 @@
     
     </a>
     
+    
           
 
     
      
    {% endfor %}
+   
+   
+    {% if schools.has_other_pages %}
+  <ul class="pagination">
+    {% if schools.has_previous %}
+      <li><a href="?page={{ schools.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in schools.paginator.page_range %}
+      {% if schools.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if schools.has_next %}
+      <li><a href="?page={{ schools.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+  
+{% endif %}
    
 {% endblock %}
 

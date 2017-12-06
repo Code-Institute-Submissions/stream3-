@@ -29,7 +29,12 @@ body{
 
 .typcn{
    font-size: 3rem;
+   color: #0fc17f;
    
+}
+
+.table-bordered {
+    border: 0px ;
 }
 
 
@@ -42,6 +47,11 @@ body{
 
 .logo_img{
    width:30%;
+}
+
+.navbar-right a{
+   color: #0fc17f ;
+   
 }
 
 /*Problem with sizing icons*/
@@ -60,4 +70,9 @@ span a{
 
 .show{
    display: block;
+}
+
+
+.fa{
+   color: #0fc17f;
 }

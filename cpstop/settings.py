@@ -25,7 +25,7 @@ SECRET_KEY = '4fpf=l&xvj9@rwdoc@5=f@xa=xwow2%6&!u*zn-m#5a&k-jmhj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['v1drive-peterkosinski.c9users.io']
+ALLOWED_HOSTS = ['stream3-project-peterkosinski.c9users.io']
 
 
 # Application definition
@@ -37,12 +37,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_forms_bootstrap',
     'multiselectfield',
     'tinymce',
     'schools',
     'page',
     'blog',
     'areas',
+    'accounts',
+    'cart',
+    'products',
+    'checkout',
 ]
 
 MIDDLEWARE = [
@@ -69,9 +74,13 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+                'cart.contexts.cart_contents',
+
+                
 
             ],
-        },
+        },                
+
     },
 ]
 
@@ -132,3 +141,6 @@ STATICFILES_DIRS = (
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE_KEY')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET_KEY')

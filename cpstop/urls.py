@@ -16,10 +16,15 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from page.views import index, input_form
-from schools import urls as schools_urls
 from .settings import MEDIA_ROOT
 from django.views import static
 from blog import urls as blogposts_urls
+from accounts import urls as accounts_urls
+from products import urls as urls_products
+from checkout import urls as urls_checkout
+from cart import urls as urls_cart
+from schools import urls as schools_urls
+
 
 
 
@@ -32,6 +37,11 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
     url(r'^blogposts/', include(blogposts_urls)),
     url(r'^input_form/', input_form, name='input_form'),
+    url(r'^accounts/', include(accounts_urls)),
+    url(r'^products/', include(urls_products)),
+    url(r'^checkout/', include(urls_checkout)),
+    url(r'^cart/', include(urls_cart)),
+
 
 
    
