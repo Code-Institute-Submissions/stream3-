@@ -202,6 +202,11 @@ container{
     padding-top:50%;
 }
 
+.mobilesignup{
+    display: block;
+    color: white;
+}
+
 /*---------------------Fonts*/
 
 .logo{
@@ -269,45 +274,9 @@ container{
 
 
 
-
-.menu-bar {
-    position: absolute;
-    height: 14px;
-    margin-left: -10px;
-    margin-top:10%;
+.mobilesignup{
+    display: none;
 }
-
-.bars {
-    
-    display: block;
-    width: 20px;
-    height: 3px;    
-    background-color: white;
-    box-shadow: 0 5px 0 white, 0 10px 0 white;
-}
-
-.menu {
-    display: none; 
-    width: 100%;
-    padding: 30px 10px 50px;
-    margin-right:20%;
-    margin-top: 25%;
-    text-align: center;
-    background-color: #fff;
-}
-.menu ul {
-    margin-bottom: 0;
-}
-.menu a {
-    color: #333; 
-    text-transform: uppercase;
-    opacity: 0.8;
-}
-.menu a:hover {
-    text-decoration: none;
-    opacity: 1;
-}
-
 
     
     
