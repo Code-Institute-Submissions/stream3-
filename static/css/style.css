@@ -205,6 +205,12 @@ container{
 .mobilesignup{
     display: block;
     color: white;
+    text-align: center;
+}
+
+.dublinbridge{
+    width: 50%;
+    color: white;
 }
 
 /*---------------------Fonts*/
@@ -274,8 +280,9 @@ container{
 
 
 
-.mobilesignup{
+.mobilesignup p{
     display: none;
+    color: white;
 }
 
     
@@ -290,7 +297,7 @@ container{
 
 @media only screen and (min-width: 800px) {
     .logo{
-        font-size: 30px;
+        font-size: 40px;
     }
     
 }

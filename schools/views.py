@@ -28,7 +28,6 @@ def all_schools(request):
     except EmptyPage:
         schools = paginator.page(paginator.num_pages)
     
-    
     return render(request, "schools.html",{"schools": schools})
 
 def view_school(request, slug):

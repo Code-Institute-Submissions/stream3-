@@ -24,7 +24,7 @@
    	<div class="row">
    		<div class="col-xs-offset-1 col-xs-10">
    		    
-   			<h1 class="logo">COMPARE <span class="stop">STOP</span></h1>
+   			<h1 class="logo">COMPARE STOP</h1>
    			</div>
    			
    		<div>
@@ -40,6 +40,7 @@
    		           Find your ideal driving lessons today
    		           
    		       </h></a>
+   		 
    		       </div>
    		       <div class="col-md-6">
    		           <a href='{% url 'input_form' %}'><h id="driving_text">
@@ -67,7 +68,6 @@
    		 <div class="row" id="blog_titles">
    		     <div class="col-xs-6">
    		         <a href="{% url 'blogposts'  %}"><h id="titles" >5 Top Tips To Get Your Driving Licence</h></a>
-   		         
    		     </div>
    		      <div class="col-xs-6 ">
    		        <a href="{% url 'blogposts'  %}"><h id="titles" >Compare Stop Launch</h></a>
@@ -85,8 +85,7 @@
    		  <div class="row discover_box">
    		      <a href="{% url 'products' %}"><div class=" col-md-offset-4 col-md-4 " id="dublin_box">
    		          <h3 id="box_heading">Advertise Your Business Here</h3>
-   		          <img class="car_logo" src="media/logos/car.png">
-   		          
+
    		      </div></a>
    		      
    		     </div>
@@ -105,7 +104,7 @@
 
             </div>
             <div>
-            <p class="mobilesignup">Are you a Driving School?</p>
+            <a href='{% url 'input_form' %}'><p class="mobilesignup">Are you a Driving School?</p></a>
           </div>
             
         </div>
