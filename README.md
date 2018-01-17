@@ -19,14 +19,12 @@ Wireframing the funtionality and outline of the project. Wireframe available her
 
 ## Components
 
+1. Search 
+2. Schools Directory
+3. Blog
+4. Advertising Market Place
+5. Google Form To Gather Data
 
-
-## Athlete Profile Page
-
-
-## Bootstrap
-
-Using bootstrap to create a responsive home page 
 
 ## Deployment / Hosting
 
