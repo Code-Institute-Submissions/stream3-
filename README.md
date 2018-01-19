@@ -7,7 +7,7 @@ This Website is a Code Institute stream 3 projet. Compare Stop is a driving scho
 
 ##Prototyping
 
-Wireframing the funtionality and outline of the project. Wireframe available here: 
+Wireframing the funtionality and outline of the project. Wireframe available here:  [here](https://drive.google.com/file/d/1rpljwHMXVN4Bf6xFGpXpjRVrST_-tLl7/view?usp=sharing)
 
 ## Built with 
 1. HTML 5
@@ -50,4 +50,10 @@ Follow the below instructions to get this project up & running on Mac (commands 
 
 
 ## Testing
-This Application was tested across a range of browsers
+A few different types of testing was done on the web application 
+
+1. Browser Testing
+
+This Application was tested across a range of browsers. 
+
+2. Mobile Responsiveness
