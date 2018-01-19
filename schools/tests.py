@@ -2,7 +2,9 @@
 from django.test import TestCase
 
 # Create your tests here.
-class TestDjango(TestCase):
-
-    def test_is_this_thing_on(self):
-        self.assertEqual(1, 1)
+class SimpleTest(TestCase):
+    def test_adding_something_simple(self):
+        self.assertEqual( 1 + 2, 3 )
+ 
+    def test_adding_something_isnt_equal(self):
+        self.assertNotEqual( 1 + 2, 3 ) # changed to make the assertNotEqual test fail
